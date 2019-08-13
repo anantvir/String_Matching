@@ -3,7 +3,7 @@
 
 # Inputs to algorithm are text T, the pattern P, the radix d (number of unique digits in the system), prime q
 
-# It basically crates a hashcode for the pattern P, then for window size = length of pattern, it slides the window on the text array
+# It basically creates a hashcode for the pattern P, then for window size = length of pattern, it slides the window on the text array
 # and for each window of size = m, it compares the hashcode of window with the hashcode of patter p. If both match, then individual characters are compared
 # to verify if both window and pattern have same characters, if they dont match then move to next window. 
 # When pattern p's hashcode and window's hashcode dont match, it is similar to collision in hashmaps
