@@ -1,4 +1,4 @@
-"""Author - Anantvir Singh, concept reference:= CLRS Page 1005"""
+"""Author - Anantvir Singh, concept reference:= CLRS Page 1005, Abdul Bari, Youtube"""
 
 # For theory refer ==> https://www.youtube.com/watch?v=V5-7GzOfADQ
 
@@ -21,9 +21,9 @@ def KMP_Matcher(T,P):
     pi = Compute_Prefix_Function(P)
     q = 0
     for i in range(1,n):
-        while q > 0 and P[q+1] != T[i]:
+        while q > 0 and P[q+1] != T[i]:     # Compare (q+1)th index of P with i'th index of T
             q = pi[q]
-        if P[q+1] == T[i]:
+        if P[q+1] == T[i]:                  # Compare (q+1)th index of P with i'th index of T
             q += 1
         if q == m:
             print('Pattern occurs with shift :',i-m)
